@@ -156,4 +156,5 @@ itle = "gitleaks config"
 	description = "Allowlisted files"
 	files = ['''^\.?gitleaks.toml$''',
 	'''(.*?)(png|jpg|gif|doc|docx|pdf|bin|xls|pyc|zip)$''',
-	'''(go.mod|go.sum)$''']
+	'''(go.mod|go.sum)$''',
+	'''package-lock.json$''']
