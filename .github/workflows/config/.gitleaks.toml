@@ -24,7 +24,7 @@ itle = "gitleaks config"
 	description = "SSH Password"
 	tags = ["key", "generic"]
 [[rules]]
-	regex = '''([\w+]{1,24})(://)([^$<]{1})([^\s";]{1,}):([^$<]{1})([^\s";]{1,})@[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,24}([^\s]+)'''
+	regex = '''([\w+]{1,24})(:\/\/)([^$<]{1})([^\s";]{1,}):([^$<]{1})([^\s";]{1,})@[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,24}([^\s]+)'''
 	description = "Username and password in URI"
 	tags = ["key", "generic"]
 [[rules]]
