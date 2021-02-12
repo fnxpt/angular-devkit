@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: gitleaks-action
-      uses: yuasabe/gitleaks-action@patch-1
+      uses: fnxpt/gitleaks-action@remote-rules-with-fix
       with:
-        config-path: .github/workflows/config/.gitleaks.toml
+        config-path: https://raw.githubusercontent.com/fnxpt/gitleaks-action/rules/.rules.toml
