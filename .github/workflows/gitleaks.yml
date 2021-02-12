@@ -7,7 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: wget
+      uses: wei/wget@v1
+      with:
+        args: -O .rules.toml https://raw.githubusercontent.com/fnxpt/gitleaks-action/rules/.rules.toml
     - name: gitleaks-action
       uses: fnxpt/gitleaks-action@remote-rules-with-fix
       with:
-        config-path: https://raw.githubusercontent.com/fnxpt/gitleaks-action/rules/.rules.toml
+        config-path: .rules.toml
