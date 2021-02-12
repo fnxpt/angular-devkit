@@ -8,8 +8,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: gitleaks-action
-      uses: zricethezav/gitleaks-action@master
-    - name: Detect Secrets
-      uses: evanextreme/detect-secrets-action@1.0.0
-    - name: CodeAnalysis
-      uses: bugbounty-site/GitSecure@master
+      uses: yuasabe/gitleaks-action@patch-1
