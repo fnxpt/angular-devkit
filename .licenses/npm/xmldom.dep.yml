@@ -1,0 +1,16 @@
+---
+name: xmldom
+version: 0.3.0
+type: npm
+summary: A pure JavaScript W3C standard-based (XML DOM Level 2 Core) DOMParser and
+  XMLSerializer module.
+homepage: https://github.com/xmldom/xmldom
+license: other
+licenses:
+- sources: LICENSE.md
+  text: |
+    You can choose any one of these licenses:
+
+    - MIT: https://opensource.org/licenses/MIT
+    - LGPL: http://www.gnu.org/licenses/lgpl.html
+notices: []

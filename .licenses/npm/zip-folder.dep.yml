@@ -1,0 +1,9 @@
+---
+name: zip-folder
+version: 1.0.0
+type: npm
+summary: zips a folder and calls your callback when it's done
+homepage: https://github.com/sole/node-zip-folder
+license: other
+licenses: []
+notices: []
