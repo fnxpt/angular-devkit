@@ -1,0 +1,35 @@
+# This is a basic workflow to help you get started with Actions
+
+name: License
+
+# also works with pull_request event
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - '**'
+
+steps:
+# if using actions/checkout at major version 2 or greater,
+# please set fetch-depth to a high number, or to 0.
+# running this action can require access to more than just the latest commit on a branch
+- uses: actions/checkout@v1
+- uses: jonabc/setup-licensed@v1
+  with:
+    version: 2.x
+- run: npm install # install your projects dependencies in local environment
+- id: licensed
+  uses: jonabc/licensed-ci@v1
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+- uses: actions/github-script@0.2.0
+  if: always() && steps.licensed.outputs.pr_number
+  with:
+    github-token: ${{ secrets.GITHUB_TOKEN }}
+    script: |
+      github.issues.createComment({
+        ...context.repo,
+        issue_number: ${{ steps.licensed.outputs.pr_number }}
+        body: 'My custom PR message'
+      })
